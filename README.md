@@ -3,7 +3,7 @@
 EGG 声门电图与音频分析桌面应用（PyQt6 GUI）。支持 GCI/GOI 检测、F0 曲线显示与规则校正、闭合相逆滤波（LPC 阶数可调）、底部时间轴 1 分钟视窗与滑条导航。
 
 ## 功能亮点
-- 双通道输入：左通道 EGG，右通道 Audio（自动归一与滤波）
+- 双通道输入：左通道 EGG，右通道 Audio（支持反转）
 - 事件检测：GCI/GOI（峰-谷混合准则，可调峰谷显著性）
 - F0 显示与校正：Praat F0 + 基于 GCI 的 F0；满足“<100 Hz 一律保留”的校正规则
 - 逆滤波：简化闭合相 CP 逆滤波，支持 `IF阶数` 文本框手动设置（留空自动：`fs/1000 + 6`）
@@ -57,5 +57,5 @@ pyinstaller --noconfirm --clean EGGAnalysisApp.spec
 - 大样例数据：如需上传，建议用 LFS：`git lfs track "*.wav"`
 
 ## 许可与致谢
-- 许可：MIT（或你选择的协议）
+- 许可：MIT
 - 致谢：本项目使用开源库 `PyQt6, NumPy, SciPy, Matplotlib, sounddevice, praat-parselmouth` 等
